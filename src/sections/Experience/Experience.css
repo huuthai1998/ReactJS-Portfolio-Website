@@ -1,0 +1,29 @@
+.experience {
+    padding: 0px 10vw;
+    background-color: rgb(185, 185, 185);
+    color: white;
+ }
+ .experienceBody {
+    margin-bottom: 2vh;
+    border-bottom: 1px solid black;
+ }
+.experienceFooter {  
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+}
+ .TechWarper {
+    width: auto;
+    height: auto;
+    margin: 10px 1vh;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font: 1em "Margarine", sans-serif;
+  }
+  .TechWarper p {
+    font-size: 1em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }

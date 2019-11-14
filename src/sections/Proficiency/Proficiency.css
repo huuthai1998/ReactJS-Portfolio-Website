@@ -1,0 +1,9 @@
+.proficiency {  
+    padding: 0px 10vw;
+    background-color: grey;
+    color: white;
+ }
+.ListProficiency {
+    display: grid;
+    grid-template-columns: 40vw 50vw;
+}

@@ -1,0 +1,27 @@
+.label {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    }
+#contactGreeting {
+  text-align: center;
+}
+.contact-form {
+  display: grid;
+  padding: 10px 10vw;
+  grid-template-columns: 10fr 10fr;
+  grid-column-gap: 1vw;
+  grid-template-areas: "name email" "message message";
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 2vh;
+}
+input {
+  border-radius: 5px;
+  height: 4vh;
+}
+#message {
+  background-color: rgb(199, 220, 238);
+  grid-area: message;
+  border-radius: 5px;
+  height: 100%;
+}
