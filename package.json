@@ -1,10 +1,11 @@
 {
-  "homepage": "https://huuthai1998.github.io/",
   "name": "web-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://huuthai1998.github.io/",
   "dependencies": {
     "gh-pages": "^2.1.1",
+    "master": "0.0.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.2"
