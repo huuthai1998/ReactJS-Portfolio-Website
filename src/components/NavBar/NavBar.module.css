@@ -1,0 +1,73 @@
+@media (max-width: 1200px) {
+  .topNav {
+    padding: 10px 10vw;
+    position: fixed;
+    display: grid;
+    max-width: 100%;
+    height: auto;
+    grid-template-columns: 2vw 35vw 5vw;
+    align-items: center;
+    background-color: black;
+    vertical-align: middle;
+  } 
+  .menuBurger {
+    cursor: pointer;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 5px;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+  }
+  .topButtons {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .menuBurger {
+    display: none;
+  }
+  
+}
+.topNav {
+  padding: 10px 10vw;
+  position: fixed;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3vw 40vw 35vw 5vw; 
+  align-items: center;
+  background-color: black;
+  vertical-align: middle;
+} 
+
+.logoWrapper {
+  display: block;
+}
+
+.logo {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.topButtonsWarper {
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.topButtons {
+  font-weight: bold;
+  font-family: "Calistoga", cursive;
+  color: white;
+  font-size: 1.2em;
+  vertical-align: middle;
+}

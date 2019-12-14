@@ -1,0 +1,40 @@
+.information {
+  padding: 0px 10vw;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 55vw 5vw;
+}
+
+.profilePicture {
+  margin-top: 9vh;
+}
+
+.introduction {
+  font-family: "Solway", serif;
+  margin-top: 15vh;
+}
+
+.facts {
+  height: 4vh;
+  font-size: 1.3em;
+  font-family: "Solway", serif;
+}
+.facts-list {
+  font-family: "Solway", serif;
+  color: black;
+}
+
+.resume {
+  height: 50px;
+  width: 20%;
+  margin: 10px 0px;
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 40px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}

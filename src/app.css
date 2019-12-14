@@ -1,0 +1,35 @@
+.header {
+  color: black;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  padding-top: 5vh;
+  font-weight: bold;
+  font-size: 4em;
+  margin-bottom: 5vh;
+}
+
+li {
+  margin: 10px;
+  font-size: 1.5em;
+  font-family: "Solway", serif;
+}
+h1 {
+  font-size: 3em;
+}
+a,
+u {
+  text-decoration: none;
+}
+a:hover {
+  font-weight: bold;
+  color: yellow;
+}
+a:visited {
+  color: white;
+}
+a{
+  color: white;
+}
+ul {
+  margin: 0px;
+}
