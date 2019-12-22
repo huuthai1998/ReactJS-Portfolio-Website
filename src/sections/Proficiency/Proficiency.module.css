@@ -1,0 +1,79 @@
+h2 {
+  font-family: "Calistoga";
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+@media (max-width: 800px) {
+  .proficiency {
+    padding: 0px 10px;
+    grid-column-gap: 10px;
+    background-color: black;
+    color: white;
+  }
+  .ListProficiency {
+    padding: 0px 5vw;
+    display: grid;
+    grid-template-areas:
+      "pro other"
+      "liPro liOther";
+  }
+}
+@media (min-width: 500px) {
+  .header {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    padding-top: 60px;
+    font-weight: bold;
+    font-size: 4em;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    padding-top: 60px;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 60px;
+  }
+  .ListProficiency {
+    padding: 0px 5vw;
+    display: grid;
+    grid-template-areas:
+      "pro"
+      "liPro"
+      "other"
+      "liOther";
+  }
+}
+@media (min-width: 800px) {
+  .proficiency {
+    padding: 0px 10vw;
+    background-color: black;
+    color: white;
+  }
+  .ListProficiency {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-template-areas:
+      "pro other"
+      "liPro liOther";
+  }
+}
+
+.otherTech {
+  grid-area: "other";
+  display: flex;
+}
+.programming {
+  grid-area: "pro";
+}
+.liWrapperPro {
+  grid-area: "liPro";
+}
+.liWrapperOther {
+  grid-area: "liOther";
+}

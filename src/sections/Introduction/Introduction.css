@@ -1,40 +1,93 @@
-.information {
-  padding: 0px 10vw;
-  background-color: grey;
-  display: grid;
-  grid-template-columns: 55vw 5vw;
+@media (max-width: 800px) {
+  .information {
+    padding: 0px 8vw;
+    background-color: black;
+    display: grid;
+    grid-template-areas:
+      "info"
+      "photo"
+      "resume";
+  }
+  .info {
+    grid-area: name;
+  }
+  .resumeWrapper {
+    justify-self: center;
+    grid-area: resume;
+  }
+  .profilePictureWrapper {
+    grid-area: photo;
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@media (min-width: 800px) {
+  .information {
+    padding: 0px 10vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+    grid-template-areas:
+      "info photo"
+      "resume photo";
+  }
+  .profilePictureWrapper {
+    grid-area: photo;
+    padding-top: 150px;
+  }
+}
+.info {
+  grid-area: name;
+}
+.resumeWrapper {
+  grid-area: resume;
 }
 
 .profilePicture {
-  margin-top: 9vh;
+  max-width: 100%;
+  margin-bottom: 50px;
+  height: auto;
+  display: block;
+  border-radius: 20px;
 }
 
 .introduction {
   font-family: "Solway", serif;
-  margin-top: 15vh;
+  padding-top: 150px;
+  letter-spacing: 1.5px;
 }
 
 .facts {
   height: 4vh;
   font-size: 1.3em;
+  letter-spacing: 1px;
   font-family: "Solway", serif;
 }
 .facts-list {
   font-family: "Solway", serif;
-  color: black;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .resume {
+  padding-right: 2vw;
+  padding-left: 2vw;
   height: 50px;
-  width: 20%;
+  width: auto;
   margin: 10px 0px;
-  background-color: blue;
-  border: 1px solid blue;
+  background-color: grey;
+  border: 1px solid grey;
   border-radius: 40px;
   cursor: pointer;
   letter-spacing: 2px;
   font-family: "Asap", sans-serif;
   font-weight: bold;
   color: white;
-  font-size: 18px;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+.resume:hover {
+  transform: scale(1.2);
 }

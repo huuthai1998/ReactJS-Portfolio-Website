@@ -7,8 +7,7 @@ import * as firebase from 'firebase';
 import firebaseConfig from './firebaseConfig'
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

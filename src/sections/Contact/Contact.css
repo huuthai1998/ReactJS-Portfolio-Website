@@ -1,17 +1,46 @@
+@media (max-width: 800px) {
+  .contact-form {
+    display: grid;
+    padding: 10px 10vw;
+    grid-template-areas: 
+   "name"
+   "email"
+   "message"
+   "send";
+  }
+  input {
+    border-radius: 5px;
+    border: solid black 1px;
+    height: 20px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+#email {
+  grid-area: email
+}
+#name {
+  grid-area: name
+}
+#message {
+  grid-area: message;
+  margin: 10px 0;
+}
 .contact {
-  background-color: grey;
+  background-color: black;
 }
 #contactGreeting {
   text-align: center;
 }
+@media (min-width: 800px) {
 .contact-form {
   display: grid;
   padding: 10px 10vw;
   grid-template-columns: 10fr 10fr;
-  grid-column-gap: 1vw;
+  grid-column-gap: 50px;
   grid-template-areas: "name email" "message message" "send send";
   grid-template-rows: auto auto auto;
-  grid-row-gap: 2vh;
+  grid-row-gap: 40px;
 }
 input {
   border-radius: 5px;
@@ -19,6 +48,8 @@ input {
   height: 3vh;
   padding: 10px;
 }
+}
+
 #message {
   border-radius: 5px;
   border: solid black 1px;
@@ -31,20 +62,36 @@ input {
 }
 .sendWarper {
   grid-area: send;
-  padding-top: 10px;
+  padding-top: 30px;
   display: flex;
   justify-content: flex-end;
 }
 .send-button {
-  width: 5vw;
-  height: 3vh;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  height: 50px;
+  width: auto;
+  margin: 30px 0px;
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 40px;
   cursor: pointer;
-  border-radius: 10px;
-  color: white;
-  background-color: blue;
-  border: 1px solid blue;
   letter-spacing: 2px;
   font-family: "Asap", sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  color: white;
+  font-size: 1.2em;
+  transition: .2s
+}
+.send-button:hover {
+  transform: scale(1.2)
+}
+
+#contactGreeting {
+  font-family: "Asap", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  align-self: center;
+  color: white;
+  margin-bottom: 60px;
 }

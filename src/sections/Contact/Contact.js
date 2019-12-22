@@ -43,7 +43,6 @@ class Contact extends React.Component {
         .set(message)
         .then(() => {
           console.log("Succeed");
-          console.log(this.state.name);
           alert("Message successfully sent. I will reply as soon as possible!");
           this.setState({
             name: "",

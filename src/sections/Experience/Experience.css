@@ -1,22 +1,26 @@
 #header-experience {
-  padding: 10px;
+  padding-top: 60px;
 }
+
 .project-name {
   font-size: 1.5em;
   font-family: "Solway", serif;
 }
 .experienceCardHeader {
-  height: 1vh;
+  height: auto;
+  letter-spacing: 1px;
   padding: 2vw;
-  background-color: blue;
+  background-color: grey;
+  border: 1px solid grey;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.external-link{
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
+.external-link {
+  height: 35px;
+  width: 35px;
 }
 .externImg {
   display: block;
@@ -25,47 +29,57 @@
 }
 .experienceCard {
   padding: 0;
-  border: 1px solid white;
+  border: 1px solid grey;
   border-radius: 10px;
 }
 .experienceCardBody {
   font-family: "Solway", serif;
   font-weight: normal;
   margin-bottom: 2vh;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
+  letter-spacing: 1px;
 }
 
 .experience {
   padding: 0px 10vw;
-  background-color: grey;
+  background-color: black;
   color: white;
 }
 
 .experienceFooter {
+  height: auto;
+  flex-wrap: wrap;
   padding: 0 2vw;
   padding-bottom: 1vh;
   display: flex;
   align-content: center;
   vertical-align: middle;
 }
+@media (min-width: 500px) {
+  .TechWarper {
+    height: 30px;
+  }
+}
+
 .TechWarper {
+  margin: 0px 15px;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
   width: auto;
-  height: auto;
-  margin: 0px 1vh 10px 1vh;
-  background-color: blue;
-  border: 5px solid blue;
+  background-color: grey;
+  border: 1px solid grey;
   border-radius: 20px;
   letter-spacing: 2px;
   font: 1em "Margarine", sans-serif;
 }
 .TechWarper p {
   font-size: 1.2em;
+  align-self: center;
+  vertical-align: middle;
   font-family: "Solway", serif;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 .experienceTech {
-  padding-top: 5px;
   font-family: "Solway", serif;
   font-size: 1.2em;
 }

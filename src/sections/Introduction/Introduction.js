@@ -1,11 +1,12 @@
 import React from "react";
 import "./Introduction.css";
 import resume from "../../resources/resume.pdf";
+import profilePic from "../../resources/profilePicture.jpg"
 class Introduction extends React.Component {
   render() {
     return (
       <main className="information" id="informationSession">
-        <div className="basicInfo">
+        <div name="info" className="basicInfo">
           <h1 className="introduction">
             {" "}
             Hi! I'm Thai Nguyen, <br /> a software developer.{" "}
@@ -19,14 +20,16 @@ class Introduction extends React.Component {
               <li> Hobbies: Do Coding challenges, soccer, video games</li>
             </ul>
           </div>
-          <a href={resume} target="_blank">
-            <button className="resume"> My Resume </button>
-          </a>
         </div>
-        <div className="profilePicture">
+        <div className="resumeWrapper">
+        <a href={resume} target="_blank">
+            <button  className="resume"> My Resume </button>
+        </a>
+         </div>
+        <div name="photo" className="profilePictureWrapper">
           <img
-            className="slideshow"
-            src="https://lh3.googleusercontent.com/j_NknsA0N0bsvHxZsBqrG_4d8aknP4Bbb20fZCMPlLNr4FpVpJ5KQaHDZxs7xEdXuyJe7rPsKA=w328-h409-no"
+            className="profilePicture"
+            src={profilePic}
             alt="My profile"
           />
         </div>

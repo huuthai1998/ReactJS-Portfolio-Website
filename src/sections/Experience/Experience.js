@@ -21,7 +21,7 @@ class Experience extends React.Component {
                   className="external-link"
                   href="http://www.itd.com.vn/vi"
                   target="_blank"
-                > <img class="externImg" src={externalLink}></img>
+                > <img className="externImg" src={externalLink}></img>
                 </a>
             </div>
             <div className="experienceCardBody">
@@ -38,7 +38,7 @@ class Experience extends React.Component {
               <li>
                 {" "}
                 The application helped parking lots save a significant time as
-                well as money compared to the traditional parking lot{" "}
+                well as money compared to the traditional parking lot.{" "}
               </li>
               <br></br>
             </div>
