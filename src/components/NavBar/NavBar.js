@@ -25,7 +25,7 @@ function NavBar() {
       !isSidebarOpen
     )
       setSidebarWidth(0);
-    else if (document.documentElement.clientWidth > 1200) setSidebarWidth(30);
+    else if (document.documentElement.clientWidth > 1200) setSidebarWidth(40);
   };
 
   const toogleSidebar = () => {

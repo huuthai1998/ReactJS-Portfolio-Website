@@ -12,32 +12,18 @@ import * as firebase from "firebase";
 import firebaseConfig from "./firebaseConfig.js";
 
 class App extends Component {
-  // componentWillMount() {
-  //   ipify().then(ip => {
-  //     iplocation(ip)
-  //       .then(res => {
-  //         var visitor = {
-  //           ...res,
-  //           time: Date()
-  //         };
-
-  //         firebase
-  //           .firestore()
-  //           .collection("Visitors")
-  //           .doc(Date.now().toString())
-  //           .set(visitor)
-  //           .then(data => {
-  //             console.log("Successful");
-  //           })
-  //           .catch(error => {
-  //             console.log(error);
-  //           });
-  //       })
-  //       .catch(err => {
-  //         console.log(err);
-  //       });
-  //   });
-  // }
+  componentWillMount() {
+    const visitTime = firebase.firestore().collection("Visitors");
+    visitTime
+      .doc(Date.now().toString())
+      .set({ time: Date() })
+      .then(() => {
+        console.log("Succeed");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
   render() {
     return (
