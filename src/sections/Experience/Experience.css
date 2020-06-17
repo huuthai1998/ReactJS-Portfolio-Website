@@ -74,11 +74,11 @@
   border-radius: 20px;
   letter-spacing: 2px;
   font: 1em "Margarine", sans-serif;
+  display: flex;
 }
 .TechWarper p {
   font-size: 1.2em;
   align-self: center;
-  vertical-align: middle;
   font-family: "Solway", serif;
 }
 .experienceTech {

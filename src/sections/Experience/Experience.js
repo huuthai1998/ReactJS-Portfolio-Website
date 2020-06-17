@@ -14,8 +14,8 @@ function Experience() {
         const textStyle = {
           color: mode ? "white" : "black",
         };
-        const expCard1 = { background: !mode ? "cyan" : "black" };
-        const expCard2 = { background: !mode ? "red" : "black" };
+        const expCard1 = { background: !mode ? "#bdf4ff" : "black" };
+        const expCard2 = { background: !mode ? "#ffc9c9" : "black" };
         return (
           <div className="experience" id="experienceSession" style={Wrapper}>
             <h1 className="header" id="header-experience" style={textStyle}>

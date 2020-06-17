@@ -23,19 +23,19 @@ export default function App() {
     localStorage.setItem("mode", JSON.stringify(!mode));
   };
 
-  useEffect(() => {
-    const visitTime = firebase.firestore().collection("Visitors");
-    visitTime
-      .doc(Date.now().toString())
-      .set({ time: Date() })
-      .then(() => {
-        console.log("Succeed");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    setMode(localStorage.getItem("mode") === "true");
-  }, []);
+  // useEffect(() => {
+  //   const visitTime = firebase.firestore().collection("Visitors");
+  //   visitTime
+  //     .doc(Date.now().toString())
+  //     .set({ time: Date() })
+  //     .then(() => {
+  //       console.log("Succeed");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   setMode(localStorage.getItem("mode") === "true");
+  // }, []);
 
   return (
     <ModeContext.Provider value={{ mode, toggleMode }}>
