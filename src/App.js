@@ -17,24 +17,44 @@ export const ModeContext = React.createContext({
 });
 
 export default function App() {
+  const axios = require("axios");
   const [mode, setMode] = useState(ModeContext.mode);
   const toggleMode = () => {
     setMode(!mode);
     localStorage.setItem("mode", JSON.stringify(!mode));
   };
 
+  async function getGeo() {
+    try {
+      var ip = await axios.get("https://api.ipify.org?format=json");
+      var geo = await axios.get(
+        `https://geo.ipify.org/api/v1?apiKey=at_RxlfOjxG5UeSAYZWZbe88cHRruHSJ&ipAddress=${ip.data.ip}`
+      );
+      var location =
+        geo.data.location.city +
+        ", " +
+        geo.data.location.region +
+        ", " +
+        geo.data.location.country +
+        ", " +
+        geo.data.location.postalCode;
+      const visitTime = firebase.firestore().collection("Visitors");
+      visitTime
+        .doc(Date.now().toString())
+        .set({ time: Date(), ip: ip.data.ip, location })
+        .then(() => {
+          console.log("Succeed");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } catch (err) {
+      console.error(err);
+    }
+  }
   useEffect(() => {
-    const visitTime = firebase.firestore().collection("Visitors");
-    visitTime
-      .doc(Date.now().toString())
-      .set({ time: Date() })
-      .then(() => {
-        console.log("Succeed");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     setMode(localStorage.getItem("mode") === "true");
+    getGeo();
   }, []);
 
   return (
