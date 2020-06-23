@@ -25,12 +25,18 @@ export default function App() {
   };
 
   async function getGeo() {
+    var time = Date.now().toString();
+    var dateTime = Date();
+    var ip = "";
+    var location = "";
+    const visitTime = firebase.firestore().collection("Visitors");
     try {
-      var ip = await axios.get("https://api.ipify.org?format=json");
+      ip = await axios.get("https://api.ipify.org?format=json");
       var geo = await axios.get(
         `https://geo.ipify.org/api/v1?apiKey=at_RxlfOjxG5UeSAYZWZbe88cHRruHSJ&ipAddress=${ip.data.ip}`
       );
-      var location =
+      ip = ip.data.ip;
+      location =
         geo.data.location.city +
         ", " +
         geo.data.location.region +
@@ -38,10 +44,22 @@ export default function App() {
         geo.data.location.country +
         ", " +
         geo.data.location.postalCode;
-      const visitTime = firebase.firestore().collection("Visitors");
       visitTime
-        .doc(Date.now().toString())
-        .set({ time: Date(), ip: ip.data.ip, location })
+        .doc(time)
+        .set({ ip, location })
+        .then(() => {
+          console.log("Succeed");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } catch (err) {
+      console.error(err);
+    }
+    try {
+      visitTime
+        .doc(time)
+        .set({ time: dateTime, ip, location })
         .then(() => {
           console.log("Succeed");
         })
